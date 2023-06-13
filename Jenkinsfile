@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def dockerImage = 'BiblioPoli'
-                    def dockerContainer = 'BiblioPoliContainer'
+                    def dockerImage = 'bibliopoli'
+                    def dockerContainer = 'bibliopolicontainer'
                     
                     // Etapa de construcción del contenedor Docker
                     sh "docker build -t $dockerImage ."
