@@ -12,7 +12,7 @@ pipeline {
                     sh "docker build -t $dockerImage ."
                     
                     // Etapa de ejecución del contenedor Docker
-                    sh "docker run --name $dockerContainer $dockerImage"
+                    sh "docker run -d -p 3000:3000 --name $dockerContainer $dockerImage"
                 }
             }
         }
