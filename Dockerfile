@@ -16,5 +16,8 @@ COPY . .
 # Compilar la aplicación de React
 RUN npm run build
 
+#puerto
+EXPOSE 3000
+
 # Especificar el comando de inicio del contenedor
 CMD ["npm", "start"]
