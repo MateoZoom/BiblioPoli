@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Index from "./pages/index";
+import Create from "./pages/create";
+import View from "./pages/view";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Store from "./store/store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          BiblioPoli
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hola Mundo V.2
-        </a>
-      </header>
-    </div>
+    <Store>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="create" element={<Create />} />
+          <Route path="view/:bookId" element={<View />} />
+        </Routes>
+      </div>
+    </Store>
   );
 }
 
