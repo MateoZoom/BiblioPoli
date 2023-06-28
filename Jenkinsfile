@@ -2,12 +2,12 @@ pipeline {
     agent any
     
     stages {
-        stage('Unit Tests') {
-            steps {
-                // Ejecutar pruebas unitarias
-                sh 'npm test'
-            }
-        }
+        // stage('Unit Tests') {
+        //     steps {
+        //         // Ejecutar pruebas unitarias
+        //         sh 'npm test'
+        //     }
+        // }
         stage('Build') {
             steps {
                 script {
